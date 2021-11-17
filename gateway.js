@@ -10,12 +10,10 @@ const gateway = new ApolloGateway({
   serviceList: [
     { name: "accounts", url: "http://localhost:4001/graphql" },
     { name: "reviews", url: "http://localhost:4002/graphql" },
-    { name: "products", url: "http://localhost:4003/graphql" },
-    { name: "inventory", url: "http://localhost:4004/graphql" }
   ],
 
   // Experimental: Enabling this enables the query plan view in Playground.
-  __exposeQueryPlanExperimental: false,
+  // __exposeQueryPlanExperimental: false,
 });
 
 (async () => {
@@ -25,10 +23,10 @@ const gateway = new ApolloGateway({
     // Apollo Graph Manager (previously known as Apollo Engine)
     // When enabled and an `ENGINE_API_KEY` is set in the environment,
     // provides metrics, schema management and trace reporting.
-    engine: false,
+    // engine: false,
 
     // Subscriptions are unsupported but planned for a future Gateway version.
-    subscriptions: false,
+    // subscriptions: false,
   });
 
   server.listen().then(({ url }) => {

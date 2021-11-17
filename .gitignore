@@ -51,3 +51,6 @@ typings/
 
 # environment variables
 .env
+
+# local history
+.history
